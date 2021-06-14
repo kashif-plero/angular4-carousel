@@ -9,6 +9,7 @@ export class SlideComponent {
   @Input() public src: string;
   @Input() public slideNo: number;
   @Input() public isHidden: boolean;
+  @Input() public showLinked: boolean;
 
   constructor() {}
 }

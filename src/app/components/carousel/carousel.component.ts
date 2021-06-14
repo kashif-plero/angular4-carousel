@@ -26,6 +26,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   public loadedImages: string[];
   public galleryLength: number;
   public currentSlide = 0;
+  public showLinked: boolean = false;
 
   constructor(private carouselService: CarouselService, private windowWidthService: WindowWidthService) { }
 
@@ -64,6 +65,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
           this.onHandleAutoplay(!this.config.autoplay);
         }
       );
+    }
+    if(this.config.showLinked) {
+      this.showLinked = true;
     }
   }
 

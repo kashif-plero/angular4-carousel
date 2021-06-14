@@ -1,3 +1,8 @@
-<img class="slide" [src]="src"
+<a href="{{src}}" target="_blank" *ngIf="showLinked">
+     <img class="slide" [src]="src"
+          [class.slide--hidden-initial]="isHidden"
+          [attr.data-slide]="slideNo">
+</a>
+<img *ngIf="!showLinked" class="slide" [src]="src"
      [class.slide--hidden-initial]="isHidden"
      [attr.data-slide]="slideNo">

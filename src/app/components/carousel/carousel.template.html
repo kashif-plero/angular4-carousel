@@ -3,6 +3,7 @@
        *ngFor="let img of loadedImages; let i = index"
        [src]="img"
        [slideNo]="i"
+       [showLinked]="showLinked"
        [isHidden]="i !== 0">
   </carousel-slide>
 
