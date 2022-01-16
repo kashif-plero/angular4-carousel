@@ -33,7 +33,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initData();
   }
-
+  ngOnChanges() {
+    this.initData();
+  }
   public initData() {
     this.galleryLength = this.sources.length;
 
